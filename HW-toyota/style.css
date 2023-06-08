@@ -1,0 +1,231 @@
+
+
+.header {
+    width: 1200px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+.header h1 {
+    width: 100%;
+    font-size: 40px;
+    padding: 60px;
+    margin: auto;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.header h1::after{
+    content: '';
+    display: block;
+    background-color: black;
+    height: 4px;
+    width: 40px;
+    margin: 30px auto 0;
+}
+
+
+.header nav {
+    width: 100%;
+    justify-content: center;
+    margin: 30px 0 80px;
+    display: flex;
+    text-align: center;
+}
+
+.header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 7px 63px;
+    color: black;
+    border: 1px solid #ccc;
+    border-bottom: 3px solid #e7211b;
+    margin: 0px 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.header nav a div{
+    font-size: 21px;
+    color: white;
+    background-color: #e7211b;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    transform: translateY(100%);
+    box-sizing: border-box;
+    padding: 6px;
+    
+}
+.header nav a:hover div{
+    transform: translateY(0);
+    transition: .5s;
+}
+
+.group {
+    width: 1200px;
+    margin: auto;
+}
+
+.group .content {
+    width: 800px;
+    height: 500px;
+    margin: 500px auto;
+    position: relative;
+}
+
+.group .content .pic {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.group .content .pic iframe {
+    position: relative;
+    top: 0;
+    left: 80px;
+    z-index: 1;
+}
+
+.group .content:nth-child(2n) .pic iframe {
+    left: -100px;
+}
+
+.group .content .pic .title {
+    width: 400px;
+    position: absolute;
+    top: -167px;
+    left: -130px;
+    text-align: justify;
+    z-index: 2;
+}   
+
+.group .content:nth-child(2n) .pic .title {
+    top: -167px;
+    left: 580px;
+}
+
+.group .content .title h2 {
+    background-color: #e7211b;
+    font-weight: bold;
+    color: white;
+    font-size: 60px;
+    display: flex;
+}
+
+.group .content .title .heading {
+    display: flex;
+    background-color: #e7211b;
+    color: white;
+    font-family: Helvetica;
+    align-items: center;
+}
+
+.group .content .title .num {
+    writing-mode: vertical-lr;
+    font-size: 150px;
+}
+
+.group .content .title .text {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.group .content .title p {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    line-height: 30px;
+}
+
+.group .content .title p span {
+    font-weight: bold;
+    font-size: 28px;
+    display: block;
+    padding: 0 0 10px;
+}
+
+.group .content .innovation {
+    background-color: #eee;
+    width: 750px;
+    position: absolute;
+    z-index: 2;
+    top: 465px;
+    left: -130px;
+}
+
+.group .content:nth-child(2n) .pic .innovation {
+    left: 230px;
+}
+
+.group .content .innovation h2 {
+    font-size: 20px;
+    color: #e7211b;
+    font-weight: bold;
+    width: 700px;
+    padding: 15px 15px 0;
+}
+.group .content .innovation h2::after {
+    content: '';
+    background-color: #e7211b;
+    display: inline-block;
+    height: 1.5px;
+    width: 500px;
+    margin-bottom: 6px;
+}
+
+.group .content .innovation .detail h3 {
+    color: white;
+    background-color: #333;
+    padding: 5px;
+    margin: 5px 15px;
+    width: fit-content;
+    font-size: 20px;
+}
+
+.group .content .innovation .detail p {
+    padding: 5px 35px 20px;
+    font-size: 18px;
+    line-height: 1.3em;
+    text-indent: -.7em;
+}
+
+.group .content .innovation .detail p::before {
+    content: '';
+    display: inline-block;
+    background-color: #e7211b;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    margin-right: 7px;
+    margin-bottom: 4px;
+}
+
+.group .content .background {
+    background-color: #eee;
+    width: 530px;
+    height: 310px;
+    position: relative;
+    right: -450px;
+    top: -610px;
+    z-index: 0;
+}
+.group .content:nth-child(2n) .background{
+    height: 450px;
+    right: -250px;
+    top: -580px;
+}
+.group .content .pic .ytlink {
+    position: absolute;
+    z-index: 2;
+    top: 45%;
+    right: -90px;
+} 
+.group .content:nth-child(2n) .pic .ytlink{
+    left: -110px;
+}
