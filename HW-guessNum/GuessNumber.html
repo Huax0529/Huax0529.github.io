@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .main {
+            width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid black;
+            margin: auto;
+            text-align: center;
+            margin-top: 100px;
+            background-color: antiquewhite;
+        }
+
+        .title {
+            width: 100%;
+            font-size: 60px;
+            padding: 20px;
+        }
+
+        .tip {
+            width: 100%;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        input {
+            height: 50px;
+            width: 80px;
+            margin: 15px;
+            font-size: 30px;
+
+        }
+
+        .button {
+            width: 100%;
+            margin: 15px auto;
+            position: relative;
+            font-size: 30px;
+            display: flex;
+        }
+
+
+        .button .press {
+            font-size: 30px;
+            margin: auto;
+            font-weight: bold;
+        }
+
+        .button .reset {
+            position: absolute;
+            right: 4px;
+            font-size: 20px;
+            bottom: 2px;
+        }
+
+        .button .count {
+            position: absolute;
+            bottom: 2px;
+            left: 4px;
+            font-size: 25px;
+        }
+
+        .button button:hover {
+            background-color: red;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="title">
+            <h1>猜數字遊戲</h1>
+        </div>
+        <div class="tip">請輸入1~100之間的整數</div>
+        <input type="text">
+        <div class="button">
+            <button class="press">輸入</button>
+            <button class="reset">Reset</button>
+            <div class="count">剩餘:5次</div>
+        </div>
+    </div>
+
+    <script>
+        let minNum = 1;
+        let maxNum = 100;
+        let input = document.querySelector("input");
+        let answer = CreateNum(minNum, maxNum);
+        let tip = document.querySelector(".tip");
+        let btn = document.querySelector(".press");
+        let inputNum;
+        let reset = document.querySelector(".reset");
+        let countNum = 0;
+        let count = document.querySelector(".count");
+        let limit = 5;
+        window.onload = function () {
+            btn.addEventListener("click", function () {
+                inputNum = parseInt(input.value);
+                GameResult(inputNum);
+            })
+            reset.addEventListener("click", function () {
+                Reset();
+            })
+        }
+
+        function CreateNum(min, max) {
+            return Math.floor(Math.random() * (max - min) + min)
+        }
+        function GameResult(num) {
+            if (inputNum.value != "" && num <= maxNum && num >= minNum && (limit - countNum) > 0) {
+                if (num === answer) {
+                    tip.innerText = `恭喜你答對,答案為${num}`;
+                    alert("恭喜你答對!!!");
+                }
+                else if (num >= minNum && num < answer) {
+                    tip.innerText = `請輸入${num}~${maxNum}之間的整數`;
+                    minNum = num;
+                }
+                else if (num <= maxNum && num > answer) {
+                    tip.innerText = `請輸入${minNum}~${num}之間的整數`;
+                    maxNum = num;
+                }
+                Count();
+                Lose();
+            }
+            else if ((limit - countNum) == 0) {
+                tip.innerText = `挑戰次數已用完`;
+                alert("挑戰次數已用完");
+            }
+            else {
+                alert(`請輸入介於${minNum}~${maxNum}之間的整數數字`);
+            }
+            input.value = "";
+        }
+        function Reset() {
+            minNum = 1;
+            maxNum = 100;
+            answer = 0;
+            answer = CreateNum(minNum, maxNum);
+            tip.innerText = `請輸入${minNum}~${maxNum}之間的整數`;
+            input.value = "";
+            countNum = 0;
+            count.innerText = `剩餘:${limit}次`;
+        }
+        function Count() {
+            countNum++;
+            count.innerText = `剩餘:${limit - countNum}次`;
+        }
+        function Lose() {
+            if ((countNum) == limit) {
+                tip.innerText = `超過${limit}次,挑戰失敗!!!!`;
+                alert(`超過${limit}次,挑戰失敗!!!!`);
+            }
+        }
+    </script>
+</body>
+
+</html>
