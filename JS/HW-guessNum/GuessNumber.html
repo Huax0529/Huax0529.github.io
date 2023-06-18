@@ -102,6 +102,7 @@
         let countNum = 0;
         let count = document.querySelector(".count");
         let limit = 5;
+        let repeat = [];
         window.onload = function () {
             btn.addEventListener("click", function () {
                 inputNum = parseInt(input.value);
@@ -116,28 +117,39 @@
             return Math.floor(Math.random() * (max - min) + min)
         }
         function GameResult(num) {
-            if (inputNum.value != "" && num <= maxNum && num >= minNum && (limit - countNum) > 0) {
+            if (inputNum.value != "" && num < maxNum && num > minNum && (limit - countNum) > 0) {
                 if (num === answer) {
                     tip.innerText = `恭喜你答對,答案為${num}`;
                     alert("恭喜你答對!!!");
+                    Count();
+                    Lose();
                 }
-                else if (num >= minNum && num < answer) {
+                else if (num == repeat) {
+                    alert("請勿輸入重複答案");
+                    repeat = num;
+                }
+                else if (num > minNum && num < answer) {
                     tip.innerText = `請輸入${num}~${maxNum}之間的整數`;
                     minNum = num;
+                    repeat = num;
+                    Count();
+                    Lose();
                 }
-                else if (num <= maxNum && num > answer) {
-                    tip.innerText = `請輸入${minNum}~${num}之間的整數`;
+                else if (num < maxNum && num > answer) {
+                    tip.innerText = `請輸入${minNum}~${num}之間的整數(不包含頭尾)`;
                     maxNum = num;
+                    repeat = num;
+                    Count();
+                    Lose();
                 }
-                Count();
-                Lose();
+
             }
             else if ((limit - countNum) == 0) {
                 tip.innerText = `挑戰次數已用完`;
                 alert("挑戰次數已用完");
             }
             else {
-                alert(`請輸入介於${minNum}~${maxNum}之間的整數數字`);
+                alert(`請輸入介於${minNum}~${maxNum}之間的整數(不包含頭尾)`);
             }
             input.value = "";
         }
@@ -146,7 +158,7 @@
             maxNum = 100;
             answer = 0;
             answer = CreateNum(minNum, maxNum);
-            tip.innerText = `請輸入${minNum}~${maxNum}之間的整數`;
+            tip.innerText = `請輸入${minNum}~${maxNum}之間的整數(不包含頭尾)`;
             input.value = "";
             countNum = 0;
             count.innerText = `剩餘:${limit}次`;
@@ -161,6 +173,7 @@
                 alert(`超過${limit}次,挑戰失敗!!!!`);
             }
         }
+
     </script>
 </body>
 
