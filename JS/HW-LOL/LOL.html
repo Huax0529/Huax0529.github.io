@@ -2200,7 +2200,9 @@
             btnListHero = document.getElementById("listhero");
             btnTableHero = document.getElementById("tablehero");
             let div = document.createElement("div");
-
+            div.setAttribute("class", "abc");
+            let table = document.createElement("table");
+            table.setAttribute("class", "table table-bordered table-striped");
             btnCreateHeroArray.addEventListener("click", function () {
                 //alert("從DOM建立英雄人物陣列資料後清除container");
 
@@ -2221,17 +2223,17 @@
                 if (document.querySelector("#container") != null) {
                     document.querySelector("#container").innerHTML = "";
                 }
-                if (document.querySelector(".last_button") != null) {
-                    document.querySelector(".last_button").innerHTML = "";
-                    console.log("最後按鈕的資料有被清空");
-                }
                 if (document.querySelector(".table") != null) {
                     document.querySelector(".table").innerHTML = "";
+                    console.log("最後按鈕的資料有被清空");
+                }
+                if (document.querySelector(".abc") != null) {
+                    document.querySelector(".abc").innerHTML = "";
                     console.log("中間按鈕的資料有被清空");
                 }
 
-                let div = document.createElement("div");
-                div.classList.add("table");
+
+
                 heroArray.forEach(x => {
                     let text = document.createElement("p");
                     let img = document.createElement("p");
@@ -2258,13 +2260,17 @@
                     alert("請先建立陣列資料");
                     return;
                 }
-
-                //清除中間按鈕資料
-                // document.querySelector(".table").innerHTML = "";
-
-                //清除起始資料
-                // document.querySelector("#container").innerHTML = "";
-
+                if (document.querySelector("#container") != null) {
+                    document.querySelector("#container").innerHTML = "";
+                }
+                if (document.querySelector(".table") != null) {
+                    document.querySelector(".table").innerHTML = "";
+                    console.log("最後按鈕的資料有被清空");
+                }
+                if (document.querySelector(".abc") != null) {
+                    document.querySelector(".abc").innerHTML = "";
+                    console.log("中間按鈕的資料有被清空");
+                }
                 heroArray.forEach(x => {
                     let array = [];
                     let name = x.name;
@@ -2276,9 +2282,6 @@
 
 
                 alert("以表格呈現英雄人物資料！");
-                let table = document.createElement("table");
-                table.classList.add("last_button");
-                table.setAttribute("class", "table table-bordered table-striped");
                 table.style.textAlign = "center";
                 let thead = document.createElement("thead");
                 thead.style.textAlign = "center";
@@ -2314,17 +2317,7 @@
                 })
 
                 table.append(tbody);
-                if (document.querySelector("#container") != null) {
-                    document.querySelector("#container").innerHTML = "";
-                }
-                if (document.querySelector(".last_button") != null) {
-                    document.querySelector(".last_button").innerHTML = "";
-                    console.log("最後按鈕的資料有被清空");
-                }
-                if (document.querySelector(".table") != null) {
-                    document.querySelector(".table").innerHTML = "";
-                    console.log("中間按鈕的資料有被清空");
-                }
+
 
 
                 document.body.append(table);
