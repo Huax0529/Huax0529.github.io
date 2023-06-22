@@ -2201,8 +2201,8 @@
             btnTableHero = document.getElementById("tablehero");
             let div = document.createElement("div");
             div.setAttribute("class", "abc");
-            let table = document.createElement("table");
-            table.setAttribute("class", "table table-bordered table-striped");
+
+
             btnCreateHeroArray.addEventListener("click", function () {
                 //alert("從DOM建立英雄人物陣列資料後清除container");
 
@@ -2214,6 +2214,7 @@
                 document.querySelector("#container").innerHTML = "";
             });
 
+            //第二個button
             btnListHero.addEventListener("click", function () {
                 if (heroArray.length == 0) {
                     alert("請先建立陣列資料");
@@ -2255,6 +2256,8 @@
 
             });
 
+
+            //第三個button
             btnTableHero.addEventListener("click", function () {
                 if (heroArray.length == 0) {
                     alert("請先建立陣列資料");
@@ -2271,6 +2274,8 @@
                     document.querySelector(".abc").innerHTML = "";
                     console.log("中間按鈕的資料有被清空");
                 }
+                let table = document.createElement("table");
+                table.setAttribute("class", "table table-bordered table-striped");
                 heroArray.forEach(x => {
                     let array = [];
                     let name = x.name;
@@ -2298,7 +2303,7 @@
                 table.append(thead);
 
                 finalArray.forEach(x => {
-                    let bodyTr = document.createElement("tr");
+                    tr = document.createElement("tr");
                     x.forEach(y => {
                         let bodyTd = document.createElement("td");
                         if (y.includes("https")) {
@@ -2310,20 +2315,13 @@
                         else {
                             bodyTd.innerHTML = y;
                         }
-
-                        bodyTr.append(bodyTd);
+                        tr.append(bodyTd);
                     })
-                    tbody.append(bodyTr);
+                    tbody.append(tr);
                 })
 
                 table.append(tbody);
-
-
-
                 document.body.append(table);
-
-
-
             });
         }
 

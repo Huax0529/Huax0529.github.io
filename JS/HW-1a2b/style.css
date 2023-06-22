@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    align-items: center;
+    background: linear-gradient(320deg, #eb92be , #ffef78,#63c9b4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255,0.30);
+    width: 400px;
+    text-align: center;
+    min-width: 400px;
+}
+.main .title{
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.main .input {
+    margin-bottom: 20px;
+}
+.main .input input{
+    border: none;
+    border-radius: 5px;
+    width: 178px;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+.main .screen{
+    background-color: white;
+    width: 178px;
+    margin: auto;
+    border-radius: 7px;
+}
+.main .buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 15px auto;
+    justify-content: space-between;
+
+}
+.main .buttons .btn{
+    background-color: white;
+    border-radius: 9px;
+    width: 46px;
+    box-sizing: border-box;
+    font-size: 30px;
+    margin: 7px;
+}
+.main .buttons .btn-press{
+    width: fit-content;
+    padding: 0 25px;
+}
+.main .btn-other{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.main .btn-other .btn{
+    width: fit-content;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.main .buttons .btn:hover{
+    color: white;
+    font-size: 35px;
+    background-color: rgb(72, 72, 238);
+    border: 1px solid white;
+    transition: .5s;
+}
