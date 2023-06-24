@@ -3,6 +3,7 @@ let input = document.querySelector("input");
 let screen = document.querySelector(".screen");
 let count = 0;
 input.disabled = true;
+alert(`提示:\n1.點擊開始\n2.請輸入不重複的4位數字\n3.提示以XAYB形式呈現，直到猜中為止。其中X表示位置正確的數的個數，而Y表示數字正確而位置不對的數的個數。\n例如，當謎底為8123，而猜謎者猜1052時，提示為0A2B。\n例如，當謎底為5637，而猜謎者猜4931時，提示為1A0B。`);
 document.querySelectorAll(".btn-num").forEach(x => {
     x.disabled = true;
     x.addEventListener('click', insertNum)
@@ -49,7 +50,7 @@ press.addEventListener('click', function () {
 })
 
 document.querySelector(".btn-tip").addEventListener('click',function(){
-    alert(`請輸入不重複的四位正數數字`);
+    alert(`提示:\n1.點擊開始\n2.請輸入不重複的4位數字\n3.提示以XAYB形式呈現，直到猜中為止。其中X表示位置正確的數的個數，而Y表示數字正確而位置不對的數的個數。\n例如，當謎底為8123，而猜謎者猜1052時，提示為0A2B。\n例如，當謎底為5637，而猜謎者猜4931時，提示為1A0B。`);
 })
 
 function insertNum(a) {
