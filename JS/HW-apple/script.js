@@ -116,6 +116,7 @@ ipadAir.addEventListener('click', function () {
     document.querySelector('.col-md-3').innerHTML = "";
     document.querySelector('.col-md-3').innerHTML = ipadAirHtml;
     attachEventListeners()
+    document.querySelector('#main-pic').src = "./ipad-main.jpg";
 })
 let iphone = document.querySelector('.btn-warning');
 iphone.addEventListener('click', function () {
@@ -193,6 +194,7 @@ iphone.addEventListener('click', function () {
     document.querySelector('.col-md-3').innerHTML = "";
     document.querySelector('.col-md-3').innerHTML = iphoneHtml;
     attachEventListeners()
+    document.querySelector('#main-pic').src = "./iphone-main.jpg";
 })
 
 let mac = document.querySelector('.btn-success');
@@ -269,6 +271,7 @@ mac.addEventListener('click', function () {
     document.querySelector('.col-md-3').innerHTML = "";
     document.querySelector('.col-md-3').innerHTML = macHtml;
     attachEventListeners()
+    document.querySelector('#main-pic').src = "./mac-main.jpg";
 })
 
 function attachEventListeners() {
