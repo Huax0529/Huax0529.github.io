@@ -1,0 +1,166 @@
+[
+    {
+        "ipadAir": [
+            {
+                "id": "A001",
+                "color": "太空灰色",
+                "price": 18900,
+                "storage": "64GB",
+                "network": "Wi-Fi",
+                "picture": "gray.jpg"
+            },
+            {
+                "id": "A002",
+                "color": "藍色",
+                "price": 18900,
+                "storage": "64GB",
+                "network": "Wi-Fi",
+                "picture": "blue.jpg"
+            },
+            {
+                "id": "A003",
+                "color": "粉紅色",
+                "price": 18900,
+                "storage": "64GB",
+                "network": "Wi-Fi",
+                "picture": "pink.jpg"
+            },
+            {
+                "id": "A004",
+                "color": "紫色",
+                "price": 18900,
+                "storage": "64GB",
+                "network": "Wi-Fi",
+                "picture": "purple.jpg"
+            },
+            {
+                "id": "A005",
+                "color": "星光色",
+                "price": 18900,
+                "storage": "64GB",
+                "network": "Wi-Fi",
+                "picture": "gold.jpg"
+            },
+            {
+                "id": "B001",
+                "color": "太空灰色",
+                "price": 23900,
+                "storage": "256GB",
+                "network": "Wi-Fi",
+                "picture": "gray.jpg"
+            },
+            {
+                "id": "B002",
+                "color": "藍色",
+                "price": 23900,
+                "storage": "256GB",
+                "network": "Wi-Fi",
+                "picture": "blue.jpg"
+            },
+            {
+                "id": "B003",
+                "color": "粉紅色",
+                "price": 23900,
+                "storage": "256GB",
+                "network": "Wi-Fi",
+                "picture": "pink.jpg"
+            },
+            {
+                "id": "B004",
+                "color": "紫色",
+                "price": 23900,
+                "storage": "256GB",
+                "network": "Wi-Fi",
+                "picture": "purple.jpg"
+            },
+            {
+                "id": "B005",
+                "color": "星光色",
+                "price": 23900,
+                "storage": "256GB",
+                "network": "Wi-Fi",
+                "picture": "gold.jpg"
+            },
+            {
+                "id": "C001",
+                "color": "太空灰色",
+                "price": 23200,
+                "storage": "64GB",
+                "network": "Cellular",
+                "picture": "gray.jpg"
+            },
+            {
+                "id": "C002",
+                "color": "藍色",
+                "price": 23200,
+                "storage": "64GB",
+                "network": "Cellular",
+                "picture": "blue.jpg"
+            },
+            {
+                "id": "C003",
+                "color": "粉紅色",
+                "price": 23200,
+                "storage": "64GB",
+                "network": "Cellular",
+                "picture": "pink.jpg"
+            },
+            {
+                "id": "C004",
+                "color": "紫色",
+                "price": 23200,
+                "storage": "64GB",
+                "network": "Cellular",
+                "picture": "purple.jpg"
+            },
+            {
+                "id": "C005",
+                "color": "星光色",
+                "price": 23200,
+                "storage": "64GB",
+                "network": "Cellular",
+                "picture": "gold.jpg"
+            },
+            {
+                "id": "D001",
+                "color": "太空灰色",
+                "price": 28200,
+                "storage": "256GB",
+                "network": "Cellular",
+                "picture": "gray.jpg"
+            },
+            {
+                "id": "D002",
+                "color": "藍色",
+                "price": 28200,
+                "storage": "256GB",
+                "network": "Cellular",
+                "picture": "blue.jpg"
+            },
+            {
+                "id": "D003",
+                "color": "粉紅色",
+                "price": 28200,
+                "storage": "256GB",
+                "network": "Cellular",
+                "picture": "pink.jpg"
+            },
+            {
+                "id": "D004",
+                "color": "紫色",
+                "price": 28200,
+                "storage": "256GB",
+                "network": "Cellular",
+                "picture": "purple.jpg"
+            },
+            {
+                "id": "D005",
+                "color": "星光色",
+                "price": 28200,
+                "storage": "256GB",
+                "network": "Cellular",
+                "picture": "gold.jpg"
+            }
+        ]
+    }
+]
