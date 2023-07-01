@@ -6,7 +6,10 @@ input.disabled = true;
 alert(`提示:\n1.點擊開始\n2.請輸入不重複的4位數字\n3.提示以XAYB形式呈現，直到猜中為止。其中X表示位置正確的數的個數，而Y表示數字正確而位置不對的數的個數。\n例如，當謎底為8123，而猜謎者猜1052時，提示為0A2B。\n例如，當謎底為5637，而猜謎者猜4931時，提示為1A0B。`);
 document.querySelectorAll(".btn-num").forEach(x => {
     x.disabled = true;
-    x.addEventListener('click', insertNum)
+    x.addEventListener('click', function (a) {
+        a.target.disabled = true;
+        input.value += a.target.innerText;
+    })
 })
 let btnStart = document.querySelector(".btn-start")
 btnStart.addEventListener('click', function () {
@@ -36,7 +39,7 @@ btnRestart.addEventListener('click', function () {
     btnStart.disabled = true;
     screen.innerText = '';
     alert("重新開始!");
-    count=0;
+    count = 0;
     numButtonAble();
 })
 
@@ -49,16 +52,16 @@ press.addEventListener('click', function () {
     numButtonAble();
 })
 
-document.querySelector(".btn-tip").addEventListener('click',function(){
+document.querySelector(".btn-tip").addEventListener('click', function () {
     alert(`提示:\n1.點擊開始\n2.請輸入不重複的4位數字\n3.提示以XAYB形式呈現，直到猜中為止。其中X表示位置正確的數的個數，而Y表示數字正確而位置不對的數的個數。\n例如，當謎底為8123，而猜謎者猜1052時，提示為0A2B。\n例如，當謎底為5637，而猜謎者猜4931時，提示為1A0B。`);
 })
 
-document.querySelector('.btn-clear').addEventListener('click',clearInput);
+document.querySelector('.btn-clear').addEventListener('click', clearInput);
 
-function insertNum(a) {
-    input.value += a.target.innerText;
-    a.target.disabled = true;
-}
+// function insertNum(a) {
+//     input.value += a.target.innerText;
+//     a.target.disabled = true;
+// }
 function createNum() {
     let numbers = []; // 用于存储已生成的数字
     while (numbers.length < 4) {
@@ -86,7 +89,7 @@ function win() {
                 b++;
             }
         }
-        count ++;
+        count++;
         screen.innerText += `第${count}次:${inputNum}:${a}A${b}B\n`
         if (a == 4) {
             screen.innerText += `恭喜答對,答案為${answer}\n`;
@@ -107,11 +110,11 @@ function isRepeat(num) {
     for (let i = 0; i < numArray.length; i++) {
         for (let j = i + 1; j < numArray.length; j++) {
             if (numArray[i] === numArray[j]) {
-                return true; 
+                return true;
             }
         }
     }
-    return false; 
+    return false;
 }
 
 //查到更簡單檢查重複的寫法!! set會把重複數值自動刪除
@@ -120,13 +123,13 @@ function isRepeat(num) {
 //     return numSet.size !== num.length;
 //  }
 
-function numButtonAble(){
+function numButtonAble() {
     document.querySelectorAll(".btn-num").forEach(x => {
         x.disabled = false;
     })
 }
 
-function clearInput(){
+function clearInput() {
     clear();
     numButtonAble();
 }
