@@ -1,0 +1,66 @@
+body{
+    background-color: plum;
+}
+.calendar{
+    width: 1000px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    outline: 1px solid black;
+}
+
+.header .current-date{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 15px 0;
+}
+.header .col-md-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .col-md-2 button{
+    background-color: white;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+.header .col-md-2 button:hover{
+    background-color: #f2f2f2;
+}
+
+.weeks .row .week{
+    padding: 10px;
+    text-align: center;
+    width: 14.05571%;
+    font-weight: bold;
+    font-size: 25px;
+    border: 1px solid #827f7f;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 1px;
+}
+
+.days .row .day{
+    width: 14.05571%;
+    padding: 3px 10px 90px;
+    border: 1px solid #827f7f;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 1px;
+    font-size: 20px;
+}
+.days .row .day.inactive{
+    color: #ccc;
+}
+.days .row .day.active{
+    color: red;
+    font-size: 25px;
+    font-weight: bolder;
+    border: 2px solid blue;
+}
+.days .row .day:hover{
+    border: 2px solid blue;
+}
