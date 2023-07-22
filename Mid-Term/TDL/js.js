@@ -2,6 +2,12 @@ let addBtn = document.getElementById('button-addon2')
 let storage = "storage"
 let storageValue = []
 let obj, int
+// [
+//     {id:xxx,text:xxx,checked:"checked"},
+//     {},
+//     {}
+
+// ]
 window.onload = function () {
     render()//渲染
     
@@ -23,6 +29,8 @@ addBtn.addEventListener('click', function () {
         render()
     }
 })
+//增加打勾的click事件
+
 //渲染
 function render() {
     let eventGroup = document.querySelector('#eventGroup')
