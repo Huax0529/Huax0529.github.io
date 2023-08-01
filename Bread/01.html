@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>可頌店官方網站</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    /* CSS樣式 */
+    body {
+      font-family: 微軟正黑體, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #482d1d;
+      opacity: 80%;
+      padding: 1px;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    h1 {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0;
+      font-size: 30px;
+    }
+
+    h1 span {
+      font-size: 30px;
+      font-family: Arial Black;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 400px;
+      background-image: url("./pic/background.jpg");
+      /* 替換成你的圖片連結 */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .row .col-md-3 .txt h2 {
+      font-weight: bold;
+    }
+
+    .row .col-md-3 .txt {
+      font-size: 20px;
+    }
+
+    .row .col-md-3 .pic {
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      height: 300px;
+    }
+
+    .row .col-md-3 img {
+      width: 100%;
+      vertical-align: top;
+      height: 100%;
+    }
+
+    .product {
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    .product h2 {
+      font-weight: bold;
+    }
+
+    .product p {
+      font-size: 20px;
+    }
+
+    .container .row .food {
+      padding-top: 15px;
+    }
+
+    .container .row .food .pic {
+      width: 90%;
+      aspect-ratio: 10/9;
+      height: 220px;
+      overflow: hidden;
+      margin: auto;
+    }
+
+    .food .pic img {
+      vertical-align: top;
+      width: 100%;
+      height: 100%;
+    }
+
+    .food h2 {
+      text-align: center;
+      font-size: 23px;
+      padding-top: 15px;
+      font-weight: bold;
+    }
+
+    .order .txt h2 {
+      font-weight: bold;
+      font-size: calc(1.325rem + .9vw);
+    }
+
+    .order .txt p {
+      font-size: 18px;
+    }
+
+    .order .txt li {
+      font-size: 17px;
+
+    }
+
+    .order img {
+      object-fit: cover;
+      vertical-align: top;
+    }
+
+    .spot {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+    }
+
+    .spot span {
+      font-size: 18px;
+    }
+
+    .service {
+      margin-top: 25px;
+    }
+
+
+    .contact-title {
+      text-align: center;
+      padding-top: 20px;
+      font-weight: bold;
+    }
+
+    .contact .tel {
+      font-weight: bold;
+    }
+
+    .contact .tel span {
+      display: block;
+      margin: 5px 0;
+    }
+
+    .contact .pic {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .contact .pic img {
+      max-width: 100%;
+      max-height: 100%;
+      vertical-align: top;
+
+      object-fit: cover;
+
+    }
+
+    .contact {
+      margin: 50px 0;
+    }
+
+    .contact .row {
+      justify-content: space-around
+    }
+
+    footer {
+      margin-bottom: 0;
+    }
+
+    footer p {
+      margin: auto;
+    }
+
+    .ourproduct {
+      background-color: #f5ddb6;
+      width: 100%;
+    }
+
+    .ourproduct .container {
+      margin-top: 20px;
+    }
+
+    .content .container:first-child {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 style="font-size: 48px; padding: 10px;">美頌 <span>Beauty Song</span> </h1>
+    <nav>
+      <ul>
+        <li><a href="#about">關於美頌</a></li>
+        <li><a href="#news">最新消息</a></li>
+        <li><a href="#menu">餐點介紹</a></li>
+        <li><a href="#locations">美頌據點</a></li>
+        <li><a href="#online-order">線上訂餐</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero-image"></div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="txt">
+            <h2 id="about">關於美頌</h2>
+            <p>美頌是一家專業的可頌店，提供各式各樣的美味可頌。無論是原味可頌、巧克力可頌還是水果可頌，都以優質的材料和獨特的製作工藝為您呈現最好的口味。</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="pic">
+            <img src="./pic/about.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="txt">
+            <h2 id="news">最新消息</h2>
+            <p>我們將定期更新最新消息，包括特價優惠、新口味推出和活動訊息。請隨時關注我們的網站以獲取最新消息。</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="pic">
+            <img src="./pic/news.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="ourproduct">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 product">
+            <h2 id="menu">我們的產品</h2>
+            <p>我們的可頌由經驗豐富的廚師手工製作，確保每一個可頌都鬆軟、香脆且美味。 <br> 無論您是喜歡傳統口味還是想要嘗試新奇的創意口味，我們都能滿足您的需求。</p>
+          </div>
+        </div>
+      </div>
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-4 food">
+            <div class="pic">
+              <img src="./pic/經典原味.jpg" alt="">
+            </div>
+            <div class="txt">
+              <h2>經典原味可頌</h2>
+            </div>
+          </div>
+          <div class="col-md-4 food">
+            <div class="pic">
+              <img src="./pic/芒果.jpg" alt="">
+            </div>
+            <div class="txt">
+              <h2>芒果香草修頌</h2>
+            </div>
+          </div>
+          <div class="col-md-4 food">
+            <div class="pic">
+              <img src="./pic/草莓提拉米蘇可頌.jpg" alt="">
+            </div>
+            <div class="txt">
+              <h2>草莓提拉米蘇可頌</h2>
+            </div>
+          </div>
+          <div class="col-md-4 food">
+            <div class="pic">
+              <img src="./pic/煙燻三文魚可頌.jpg" alt="">
+            </div>
+            <div class="txt">
+              <h2>煙燻三文魚可頌</h2>
+            </div>
+          </div>
+          <div class="col-md-4 food">
+            <div class="pic">
+              <img src="./pic/擷取.PNG" alt="">
+            </div>
+            <div class="txt">
+              <h2>打拋豬起司可頌</h2>
+            </div>
+          </div>
+          <div class="col-md-4 food">
+            <div class="pic">
+              <img src="./pic/芋泥鹹蛋黃可頌.jpg" alt="">
+            </div>
+            <div class="txt">
+              <h2>芋泥鹹蛋黃可頌</h2>
+            </div>
+          </div>
+
+          <div class="col-md-4 food">
+            <div class="pic">
+              <img src="./pic/原味經典修頌.jpg" alt="">
+            </div>
+            <div class="txt">
+              <h2>原味經典修頌</h2>
+            </div>
+          </div>
+          <div class="col-md-4 food">
+            <div class="pic">
+              <img src="./pic/榴槤修頌.jpg" alt="">
+            </div>
+            <div class="txt">
+              <h2>榴槤修頌</h2>
+            </div>
+          </div>
+          <div class="col-md-4 food">
+            <div class="pic">
+              <img src="./pic/紫薯芋泥修頌.jpg" alt="">
+            </div>
+            <div class="txt">
+              <h2>紫薯芋泥修頌</h2>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container service">
+      <div class="row">
+        <div class="col-md-3 order">
+          <div class="txt">
+            <h2 id="locations">美頌據點</h2>
+            <p>我們的可頌店位於多個城市，包括台北、新北、台中和高雄。您可以在以下地址找到我們的分店：</p>
+            <div class="allspot">
+              <div class="spot">
+                <span>台北店</span>
+                <span>新北店</span>
+              </div>
+              <div class="spot">
+                <span>台中店</span>
+                <span>高雄店</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 order">
+          <div class="pic">
+            <img src="./pic/middlesection-1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-3 order">
+          <div class="txt">
+            <h2 id="online-order">線上訂餐</h2>
+            <p>現在您可以輕鬆在線上訂購我們的美味可頌。只需填寫訂單表格並選擇您喜歡的口味，我們將盡快為您準備好。</p>
+          </div>
+        </div>
+        <div class="col-md-3 order">
+          <div class="pic">
+            <img src="./pic/middlesection-2.webp" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="container contact">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="contact-title">聯絡我們</h2>
+            <p>
+              感謝您對我們可頌店的支持，我們期待著與您一起分享美味可頌的喜悅。請繼續關注我們的官網，如果您有任何問題、意見或訂購需求，請隨時與我們聯繫。我們樂意為您提供專業的協助和客製化的服務。您可以通過以下方式與我們取得聯繫。
+            <div class="tel"> <span>電話:02-2888-02888</span> <span>Email:beautysong.gmail.com</span>
+              <span>地址:台北市內湖區瑞光路777號</span>
+            </div>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <div class="pic">
+              <img src="./pic/合照原圖.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 美頌Beauty Song. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
