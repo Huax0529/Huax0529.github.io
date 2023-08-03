@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(./pic/valorant.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            /* 设置背景图像的起始位置为页面的左上角 */
+            background-position: top left;
+        }
+
+        [box-id] img {
+            width: 130%;
+            height: 40%;
+        }
+
+        .title {
+            font-size: 50px;
+            color: black;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        i {
+            font-size: 48px;
+        }
+
+        [box-id] {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: 0.3s;
+            /* border: 1px solid rgba(128, 128, 128, 0.734); */
+            /* background-color: bisque; */
+        }
+
+        [box-id].active {
+            border: solid 5px black;
+            /* box-shadow: 0 0 10px red; */
+            transition: 0s;
+            background-color: rgb(208, 204, 204);
+            border-radius: 50%;
+        }
+
+        #msg {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .header {
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+        }
+
+        h1 {
+            font-weight: bold;
+            color: white
+        }
+
+        #msg {
+            font-weight: bold;
+        }
+
+        #exampleModalLabel {
+            font-weight: bold;
+            font-size: 25px;
+            background-color: yellow;
+        }
+
+        #btndiv {
+            text-align: center;
+        }
+
+        #startBtn {
+            font-size: 35px;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .bg_Lblue:hover {
+            border: solid 3px #d9eef0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1" box-id="1"></div>
+            <div class="col-1" box-id="2"></div>
+            <div class="col-1" box-id="3"></div>
+            <div class="col-1" box-id="4"></div>
+            <div class="col-1" box-id="5"></div>
+            <div class="col-1" box-id="6"></div>
+            <div class="col-1" box-id="7"></div>
+            <div class="col-1" box-id="8"></div>
+            <div class="col-1" box-id="9"></div>
+            <div class="col-1" box-id="10"></div>
+            <div class="col-1" box-id="11"></div>
+            <div class="col-1" box-id="12"></div>
+        </div>
+        <div class="row">
+            <div class="col-1" box-id="32"></div>
+            <div class="col-10">
+                <h1 class="title">特戰英豪-小瑪莉</h1>
+            </div>
+            <div class="col-1" box-id="13"></div>
+        </div>
+        <div class="row">
+            <div class="col-1" box-id="31"></div>
+            <div class="col-10" id="btndiv">
+                <div class="col-10 mx-auto my-4">
+                    <button class="btn bg_Lblue" id="startBtn">Start</button>
+                </div>
+            </div>
+            <div class="col-1" box-id="14"></div>
+        </div>
+        <div class="row">
+            <div class="col-1" box-id="30"></div>
+            <div class="col-10" id="msg"></div>
+            <div class="col-1" box-id="15"></div>
+        </div>
+        <div class="row">
+            <div class="col-1" box-id="29"></div>
+            <div class="col-10">
+            </div>
+            <div class="col-1" box-id="16"></div>
+        </div>
+        <div class="row">
+            <div class="col-1" box-id="28"></div>
+            <div class="col-1" box-id="27"></div>
+            <div class="col-1" box-id="26"></div>
+            <div class="col-1" box-id="25"></div>
+            <div class="col-1" box-id="24"></div>
+            <div class="col-1" box-id="23"></div>
+            <div class="col-1" box-id="22"></div>
+            <div class="col-1" box-id="21"></div>
+            <div class="col-1" box-id="20"></div>
+            <div class="col-1" box-id="19"></div>
+            <div class="col-1" box-id="18"></div>
+            <div class="col-1" box-id="17"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close_x">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="memeImage">
+                    Modal內容
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script>
+
+
+        let brickData = [{
+            "id": "1",
+            "icon": "./pic/vandal.png",
+            "meme": "./pic/暴徒.png",
+            "target": function () {
+                return "打困難機器人30隻"
+            }
+        },
+        {
+            "id": "2",
+            "icon": "./pic/ares.png",
+            "meme": "./pic/戰神.png",
+            "target": function () {
+                return "取得五連殺"
+            }
+        },
+        {
+            "id": "3",
+            "icon": "./pic/bucky.png",
+            "meme": "./pic/重砲.png",
+            "target": function () {
+                return "積分爬到鑽石"
+            }
+        },
+        {
+            "id": "4",
+            "icon": "./pic/bulldog.png",
+            "meme": "./pic/鬥牛犬.png",
+            "target": function () {
+                return "選10次蘇法"
+            }
+        },
+        {
+            "id": "5",
+            "icon": "./pic/frenzy.png",
+            "meme": "./pic/狂是.png",
+
+            "target": function () {
+                return "使用10次技能"
+            }
+        },
+        {
+            "id": "6",
+            "icon": "./pic/ghost.png",
+            "meme": "./pic/鬼魅.png",
+
+            "target": function () {
+                return "暴頭10次"
+            }
+        },
+        {
+            "id": "7",
+            "icon": "./pic/judge.png",
+            "meme": "./pic/判官.png",
+
+            "target": function () {
+                return "使用敵人的槍械"
+            }
+        },
+        {
+            "id": "8",
+            "icon": "./pic/marshal.png",
+            "meme": "./pic/警長.png",
+
+            "target": function () {
+                return "玩10場遊戲"
+            }
+        },
+        {
+            "id": "9",
+            "icon": "./pic/odin.png",
+            "meme": "./pic/澳丁.png",
+            "target": function () {
+                return "買10個間諜造型"
+            }
+        },
+        {
+            "id": "10",
+            "icon": "./pic/operator.png",
+            "meme": "./pic/間諜.png",
+
+            "target": function () {
+                return "對敵人造成10000傷害"
+            }
+        },
+        {
+            "id": "11",
+            "icon": "./pic/phantom.png",
+            "meme": "./pic/幻象.png",
+
+            "target": function () {
+                return "玩錢伯爾10次"
+            }
+        },
+        {
+            "id": "12",
+            "icon": "./pic/sheriff.png",
+            "meme": "./pic/神射.png",
+
+            "target": function () {
+                return "玩10次菲德"
+            }
+        },
+        {
+            "id": "13",
+            "icon": "./pic/Shorty.png",
+            "meme": "./pic/短管.png",
+
+            "target": function () {
+                return "為隊友取得勝利"
+            }
+        },
+        {
+            "id": "14",
+            "icon": "./pic/spectre.png",
+            "meme": "./pic/惡靈.png",
+
+            "target": function () {
+                return "取得10次手殺"
+            }
+        },
+        {
+            "id": "15",
+            "icon": "./pic/stinger.png",
+            "meme": "./pic/刺針.png",
+
+            "target": function () {
+                return "10次暴頭"
+            }
+        },
+        {
+            "id": "16",
+            "icon": "./pic/tactical-knife.png",
+            "meme": "./pic/戰術小刀.png",
+            "target": function () {
+                return "買10把小刀造型"
+            }
+        },
+        {
+            "id": "17",
+            "icon": "./pic/vandal.png",
+            "meme": "./pic/暴徒.png",
+            "target": function () {
+                return "使用10種暴徒造型"
+            }
+        },
+        {
+            "id": "18",
+            "icon": "./pic/ares.png",
+            "meme": "./pic/戰神.png",
+            "target": function () {
+                return "用戰神取得1000穿牆傷害"
+            }
+        },
+        {
+            "id": "19",
+            "icon": "./pic/bucky.png",
+            "meme": "./pic/重砲.png",
+            "target": function () {
+                return "在角落用重砲殺敵"
+            }
+        },
+        {
+            "id": "20",
+            "icon": "./pic/bulldog.png",
+            "meme": "./pic/鬥牛犬.png",
+            "target": function () {
+                return "玩10次布史東"
+            }
+        },
+        {
+            "id": "21",
+            "icon": "./pic/frenzy.png",
+            "meme": "./pic/狂是.png",
+            "target": function () {
+                return "阻止敵人裝包"
+            }
+        },
+        {
+            "id": "22",
+            "icon": "./pic/ghost.png",
+            "meme": "./pic/鬼魅.png",
+            "target": function () {
+                return "取得10次助攻"
+            }
+        },
+        {
+            "id": "23",
+            "icon": "./pic/judge.png",
+            "meme": "./pic/判官.png",
+            "target": function () {
+                return "連贏5場遊戲"
+            }
+        },
+        {
+            "id": "24",
+            "icon": "./pic/marshal.png",
+            "meme": "./pic/警長.png",
+            "target": function () {
+                return "邀請10個好友玩遊戲"
+            }
+        },
+        {
+            "id": "25",
+            "icon": "./pic/odin.png",
+            "meme": "./pic/澳丁.png",
+            "target": function () {
+                return "對敵人造成5000傷害"
+            }
+        },
+        {
+            "id": "26",
+            "icon": "./pic/operator.png",
+            "meme": "./pic/間諜.png",
+
+            "target": function () {
+                return "使用20次技能"
+            }
+        },
+        {
+            "id": "27",
+            "icon": "./pic/phantom.png",
+            "meme": "./pic/幻象.png",
+            "target": function () {
+                return "使用閃光閃瞎對面10次"
+            }
+        },
+        {
+            "id": "28",
+            "icon": "./pic/sheriff.png",
+            "meme": "./pic/神射.png",
+
+            "target": function () {
+                return "使用炸彈跳殺敵"
+            }
+        },
+        {
+            "id": "29",
+            "icon": "./pic/Shorty.png",
+            "meme": "./pic/短管.png",
+
+            "target": function () {
+                return "打中等機器人25隻"
+            }
+        },
+        {
+            "id": "30",
+            "icon": "./pic/spectre.png",
+            "meme": "./pic/惡靈.png",
+
+            "target": function () {
+                return "為隊友買槍枝"
+            }
+        },
+        {
+            "id": "31",
+            "icon": "./pic/stinger.png",
+            "meme": "./pic/刺針.png",
+
+            "target": function () {
+                return "使用刺針殺敵"
+            }
+        },
+        {
+            "id": "32",
+            "icon": "./pic/tactical-knife.png",
+            "meme": "./pic/戰術小刀.png",
+            "target": function () {
+                return "盡情的甩刀"
+            }
+        }
+        ]
+        // 宣告
+        let steps = 0;
+        let allSteps = 0;
+        let currentIndex = 0;
+        let speed = 0;
+        let bricks = document.querySelectorAll('[box-id]');
+        let closeButton = document.querySelector('#close');
+        let close_XButton = document.querySelector('#close_x');
+        let modal = document.getElementById('exampleModal');
+
+        closeButton.addEventListener('click', function () {
+            $(modal).modal('hide');
+        });
+
+        close_XButton.addEventListener('click', function () {
+            $(modal).modal('hide');
+        });
+
+        bricks = Array.from(bricks).sort((a, b) => {
+            return a.getAttributeNode('box-id').value - b.getAttributeNode('box-id').value
+        });
+
+        bricks.forEach((x, index) => {
+            let id = index + 1;
+            let data = brickData.find(x => x.id == id)
+            let icon = document.createElement('img');
+            icon.src = data.icon;
+
+            x.appendChild(icon);
+        })
+
+        // Start Button
+        document.getElementById('startBtn').addEventListener('click', function () {
+            speed = 30;
+            let random = Math.floor(Math.random() * brickData.length) + 1;
+            steps = random + (3 * bricks.length);
+            allSteps = steps;
+            turnAround()
+        })
+
+        function turnAround() {
+            bricks[currentIndex].classList.remove('active');
+            currentIndex++;
+            if (currentIndex >= bricks.length) {
+                currentIndex = 0
+            }
+            bricks[currentIndex].classList.add('active')
+            steps--;
+
+            if (steps > 0) {
+                setTimeout(turnAround, speed);
+                if (steps < Math.floor((allSteps / 3))) {
+                    speed += 7;
+                }
+            } else {
+                let msgBox = document.getElementById('msg')
+                let val = brickData[currentIndex].target();
+                // msgBox.innerText = `恭喜選到${val}`
+
+                let modal = document.getElementById('exampleModal');
+                let modalTitle = modal.querySelector('.modal-title');
+                modalTitle.innerText = `每日任務: ${val}`;
+
+                let modalBody = modal.querySelector('.modal-body');
+                let imgElement = document.createElement('img');
+                imgElement.src = brickData[currentIndex].meme;
+                modalBody.innerHTML = '';
+                modalBody.appendChild(imgElement);
+
+
+                $(modal).modal('show');
+            }
+        }
+    </script>
+</body>
+
+</html>
