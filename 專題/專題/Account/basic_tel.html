@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="basic_tel.css">
+</head>
+
+<body>
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-12 col-md-3 ">
+                <nav class="mx-auto ">
+                    <h2 id="myPinkoi">我的 Pinkoi</h2>
+                    <ul class="ul ">
+                        <li><a href="../OrderDetail/unpaid.html">購買訂單</a></li>
+                        <li><a href="../Refund/processing.html">退款申請</a></li>
+                        <li class="subul">
+                            會員專區
+                            <ul>
+                                <li><a href="../Member/member.html">會員專區</a></li>
+                                <li><a href="../Member/rights.html">等級權益</a></li>
+                            </ul>
+                        </li>
+                        <li class="subul">
+                            P Coins
+                            <ul>
+                                <li><a href="../P Coins/award.html">P coins兌換獎勵</a></li>
+                                <li><a href="../P Coins/sequence.html">兌換序號P coins</a></li>
+                                <li><a href="../P Coins/record.html">P coins紀錄</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../My_Award/my_award.html">我的獎勵</a></li>
+                        <li><a href="../Coupon/coupon.html">優惠券</a></li>
+                        <li class="subul">
+                            帳號設定
+                            <ul>
+                                <li><a href="../Account/basic.html">基本設定</a></li>
+                                <li><a href="../Account/aboutMe.html">關於我</a></li>
+                                <li><a href="../Account/creditCard.html">信用卡管理</a></li>
+                                <li><a href="../Account/email.html">電子郵件通知設定</a></li>
+                                <li><a href="../Account/realname.html">關務十名認證登記</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-12 col-md-9 information">
+                <h2>基本設定</h2>
+                <p>請放心，你的電子郵件及所有與設計師溝通的訊息、檔案及相關購買資料，網站將依照個人資料保護法保障你的個人隱私！<a id="privay" href="">Pinkoi 隱私權政策</a> </p>
+                <ul class="nav nav-underline">
+                    <li class="nav-item">
+                        <a id="basic" class="nav-link" href="./basic.html">基本資料</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="tel" class="nav-link" href="./basic_tel.html">手機號碼</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="email" class="nav-link" href="./basic_email.html">電子郵件</a>
+                    </li>
+                </ul>
+                <div class="g-form-label mt-4">變更你的手機</div>
+                <label class="g-form-input-wrapper s-fullwidth">
+                    <input type="text" class="g-form-input s-fullwidth mt-2" value="+886 *****3577">
+                </label>
+                <button class="btnStore mt-3 d-block ">更新</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

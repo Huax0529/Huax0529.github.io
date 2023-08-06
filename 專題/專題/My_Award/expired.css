@@ -1,0 +1,71 @@
+#myPinkoi{
+    font-weight: bolder;
+}
+h3 {
+    font-size: 20px;
+}
+nav{
+    width: fit-content;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.subul {
+    font-size: 17px;
+}
+
+.subul ul li a {
+    font-size: 15px;
+    color: #66666a;
+    padding-left: 15px;
+}
+
+a:hover {
+    color: #2e90b7;
+}
+.subul ul li a:hover{
+    color: #2e90b7;
+}
+
+h2{
+    font-size: 22px;
+}
+
+.information ul li a{
+    color: black;
+}
+.nav-underline{
+    border-bottom: 1px solid #ccc;
+}
+#inactive{
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+#inactive:hover{
+    font-weight: bold;
+    border-bottom: 2px solid #2e90b7;
+}
+
+.content .pic{
+    width: 50%;
+    margin: auto;
+}
+.content .pic img{
+    width: 100%;
+    vertical-align: top;
+}
+.content .txt{
+    width: fit-content;
+    margin: auto;
+    font-size: 14px;
+}

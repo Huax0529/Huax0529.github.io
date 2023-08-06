@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="basic_tel.css">
+</head>
+
+<body>
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-12 col-md-3 ">
+                <nav class="mx-auto ">
+                    <h2 id="myPinkoi">我的 Pinkoi</h2>
+                    <ul class="ul ">
+                        <li><a href="../OrderDetail/unpaid.html">購買訂單</a></li>
+                        <li><a href="../Refund/processing.html">退款申請</a></li>
+                        <li class="subul">
+                            會員專區
+                            <ul>
+                                <li><a href="../Member/member.html">會員專區</a></li>
+                                <li><a href="../Member/rights.html">等級權益</a></li>
+                            </ul>
+                        </li>
+                        <li class="subul">
+                            P Coins
+                            <ul>
+                                <li><a href="../P Coins/award.html">P coins兌換獎勵</a></li>
+                                <li><a href="../P Coins/sequence.html">兌換序號P coins</a></li>
+                                <li><a href="../P Coins/record.html">P coins紀錄</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../My_Award/my_award.html">我的獎勵</a></li>
+                        <li><a href="../Coupon/coupon.html">優惠券</a></li>
+                        <li class="subul">
+                            帳號設定
+                            <ul>
+                                <li><a href="../Account/basic.html">基本設定</a></li>
+                                <li><a href="../Account/aboutMe.html">關於我</a></li>
+                                <li><a href="../Account/creditCard.html">信用卡管理</a></li>
+                                <li><a href="../Account/email.html">電子郵件通知設定</a></li>
+                                <li><a href="../Account/realname.html">關務十名認證登記</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-12 col-md-9 information">
+                <div id="panel_content" class="clr">
+
+                    <div id="my-setting-about">
+                        <div class="g_page_panel_editable">
+                            <h2>關於我</h2>
+                            <div class="g-info bg-success-subtle">
+                                <b class="d-block text-info-emphasis ">小提醒</b>
+                                本頁面所有資料將會在你的個人頁面公開顯示且能被搜尋及連結。建議你僅填入非關於個人隱私的內容及敘述！
+                            </div>
+                            <h3 class="pt-4">讓朋友認識你</h3>
+                            <div class="body">
+                                <div class="g-form-row"><label class="g-form-label"
+                                        for="intro-intro ">你是怎樣的一個人</label><textarea id="intro-intro"
+                                        class="g-form-textarea d-block w-100" name="intro" maxlength="800"></textarea>
+                                </div>
+                                <div class="g-form-row"><label class="g-form-label pt-4" for="intro-blog">部落格</label><input
+                                        id="intro-blog" class="g-form-input s-fullwidth d-block w-100" type="text" name="blog"
+                                        value="">
+                                </div>
+                                <div class="g-form-row"><label class="g-form-label pt-4"
+                                        for="intro-website">個人網站</label><input id="intro-website"
+                                        class="g-form-input s-fullwidth d-block w-100" type="text" name="website" value="">
+                                </div>
+                            </div>
+                            <div class="footer pt-3"><button type="button"
+                                    class="m-br-button m-br-button--primary m-br-button--md submit">更新</button>
+                            </div>
+                        </div>
+                        <div class="g_page_panel_editable pt-4">
+                            <h3>你是怎麼過生活</h3>
+                            <div class="body">
+                                <div class="g-form-row"><label class="g-form-label pt-4"
+                                        for="shopping-interest">你喜歡什麼東西、平常愛買些什麼</label><textarea id="shopping-interest"
+                                        class="g-form-textarea d-block w-100" name="interest"></textarea>
+                                </div>
+                                <div class="g-form-row"><label class="g-form-label pt-4"
+                                        for="shopping-favmarket">愛逛的市集、設計師、老屋聚落</label><textarea id="shopping-favmarket"
+                                        class="g-form-textarea d-block w-100" name="favmarket"></textarea>
+                                </div>
+                            </div>
+                            <div class="footer pt-3"><button type="button"
+                                    class="m-br-button m-br-button--primary m-br-button--md submit">更新</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

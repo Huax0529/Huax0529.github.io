@@ -1,0 +1,84 @@
+#myPinkoi{
+    font-weight: bolder;
+}
+h3 {
+    font-size: 20px;
+}
+nav{
+    width: fit-content;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.subul {
+    font-size: 17px;
+}
+
+.subul ul li a {
+    font-size: 15px;
+    color: #66666a;
+    padding-left: 15px;
+}
+
+a:hover {
+    color: #2e90b7;
+}
+.subul ul li a:hover{
+    color: #2e90b7;
+}
+
+h2{
+    font-size: 22px;
+}
+
+.information ul li a{
+    color: black;
+}
+.nav-underline{
+    border-bottom: 1px solid #ccc;
+}
+#complete{
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+#complete:hover{
+    font-weight: bold;
+    border-bottom: 2px solid #2e90b7;
+}
+.date{
+    font-size: 17px;
+}
+.row-group{
+    border-bottom: 1px solid #ccc;
+}
+.group{
+    display: flex;
+    font-size: 17px;
+    align-items: center;
+    margin-top: 8px;
+}
+.group-state div{
+    width: 50%;
+}
+.group-state div:first-child{
+    text-align: end;
+}
+.group div:nth-child(2n){
+    padding-left: 20px;
+}
+.group-detail div:first-child{
+    width: 25%;
+}
+.group-detail div:nth-child(2n){
+    width: 75%;
+}
