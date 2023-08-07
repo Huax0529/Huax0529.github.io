@@ -1,5 +1,6 @@
 footer{
-    margin: 50px 0;
+    position: fixed;
+    bottom: 0;
     padding: 64px;
     background: #f7f7f8;
     width: 100%;
@@ -42,5 +43,8 @@ footer .rights{
     height: fit-content;
     font-size: 12px;
     padding-right: 0px;
+}
+.bottom{
+    border-top: 1px solid #ccc;
 }
 
