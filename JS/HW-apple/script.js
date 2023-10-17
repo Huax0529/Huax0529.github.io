@@ -65,10 +65,10 @@ ipadAir.addEventListener('click', function () {
             <p class="card-text">NT$23,900 起</p>
         </div>
     </button>
-    <div class="card">
-        <div class="card-body">
-            <h3>不確定需要多少儲存空間？</h3>
-            <p class="card-text">你的 iPad Air 儲存空間愈大， 你就有愈多空間儲存數位內容，滿足今日所需，也滿足未來需求。</p>
+    <div class="card" disabled>
+        <div class="card-body" disabled>
+            <h3 disabled>不確定需要多少儲存空間？</h3>
+            <p disabled class="card-text">你的 iPad Air 儲存空間愈大， 你就有愈多空間儲存數位內容，滿足今日所需，也滿足未來需求。</p>
         </div>
     </div>
 </div>
@@ -96,11 +96,11 @@ ipadAir.addEventListener('click', function () {
             </div>
         </button>
     </div>
-    <div class="card">
-        <div class="card-body">
-            <div class="text">
-                <h4>想要進一步了解 Wi-Fi + 行動網路機型？</h4>
-                <p class="card-text">如果現場沒有可供使用的 Wi-Fi，Wi-Fi + 行動網路機型可讓你透過行動網路數據方案保持連線。
+    <div class="card" disabled>
+        <div class="card-body" disabled>
+            <div class="text" disabled>
+                <h4 disabled>想要進一步了解 Wi-Fi + 行動網路機型？</h4>
+                <p disabled class="card-text">如果現場沒有可供使用的 Wi-Fi，Wi-Fi + 行動網路機型可讓你透過行動網路數據方案保持連線。
                     購買 Wi-Fi + 行動網路機型後，需要設定行動網路連線。</p>
             </div>
         </div>
@@ -176,10 +176,10 @@ iphone.addEventListener('click', function () {
             <p class="card-text">NT$26,000 起</p>
         </div>
     </button>
-    <div class="card">
-        <div class="card-body">
-            <h3>不確定需要多少儲存空間？</h3>
-            <p class="card-text">你的 iPad Air 儲存空間愈大， 你就有愈多空間儲存數位內容，滿足今日所需，也滿足未來需求。</p>
+    <div class="card" disabled>
+        <div class="card-body" disabled>
+            <h3 disabled>不確定需要多少儲存空間？</h3>
+            <p disabled class="card-text">你的 iPad Air 儲存空間愈大， 你就有愈多空間儲存數位內容，滿足今日所需，也滿足未來需求。</p>
         </div>
     </div>
 </div>
@@ -254,10 +254,10 @@ mac.addEventListener('click', function () {
             <p class="card-text">+NT$24,000</p>
         </div>
     </button>
-    <div class="card">
-        <div class="card-body">
-            <h3>不確定需要多少儲存空間？</h3>
-            <p class="card-text">你的 iPad Air 儲存空間愈大， 你就有愈多空間儲存數位內容，滿足今日所需，也滿足未來需求。</p>
+    <div class="card" disabled>
+        <div class="card-body" disabled>
+            <h3 disabled>不確定需要多少儲存空間？</h3>
+            <p disabled class="card-text">你的 iPad Air 儲存空間愈大， 你就有愈多空間儲存數位內容，滿足今日所需，也滿足未來需求。</p>
         </div>
     </div>
 </div>
@@ -333,11 +333,11 @@ function attachEventListeners() {
         x.addEventListener('click', function () {
             const ram = document.querySelector('.ram');
             if(ram!=null){
-                ram.scrollIntoView({ behavior: 'smooth' });
+                // ram.scrollIntoView({ behavior: 'smooth' });
             }
             else{
                 const storagebtn = document.querySelector('.storage');
-                storagebtn.scrollIntoView({ behavior: 'smooth' });
+                // storagebtn.scrollIntoView({ behavior: 'smooth' });
             }
             
         });
@@ -347,11 +347,11 @@ function attachEventListeners() {
         x.addEventListener('click', function () {
             const wifiBtn = document.querySelector('.wifi');
             if (wifiBtn!=null) {
-                wifiBtn.scrollIntoView({ behavior: 'smooth' });
+                // wifiBtn.scrollIntoView({ behavior: 'smooth' });
             }
             else {
                 const finalPrice = document.querySelector('.finalPrice');
-                finalPrice.scrollIntoView({ behavior: 'smooth' });
+                // finalPrice.scrollIntoView({ behavior: 'smooth' });
             }
 
         });
@@ -360,13 +360,13 @@ function attachEventListeners() {
     wifiBtns.forEach(x => {
         x.addEventListener('click', function () {
             const finalPrice = document.querySelector('.finalPrice');
-            finalPrice.scrollIntoView({ behavior: 'smooth' });
+            // finalPrice.scrollIntoView({ behavior: 'smooth' });
         });
     })
     ramBtns.forEach(x => {
         x.addEventListener('click', function () {
             const finalPrice = document.querySelector('.storage');
-            finalPrice.scrollIntoView({ behavior: 'smooth' });
+            // finalPrice.scrollIntoView({ behavior: 'smooth' });
         });
     })
 }
